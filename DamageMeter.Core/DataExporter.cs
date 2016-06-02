@@ -195,14 +195,7 @@ namespace DamageMeter
             //Leveling area only, don't care about that
             var areaId = int.Parse(teradpsData.areaId);
             if ( 
-                areaId != 459 &&
-                areaId != 759 &&
-                areaId != 511 &&
-                areaId != 611 &&
-                areaId != 711 &&
-                areaId != 886 &&
-                areaId != 460 &&
-                areaId != 467 && 
+                areaId != 467 &&
                 areaId != 767 &&
                 areaId != 768 &&
                 areaId != 468
@@ -236,7 +229,6 @@ namespace DamageMeter
             */
             var areaId = int.Parse(teradpsData.areaId);
             if (
-                areaId != 886 &&
                 areaId != 467 &&
                 areaId != 767 &&
                 areaId != 768 &&
@@ -246,7 +238,7 @@ namespace DamageMeter
                 return;
             }
 
-            if(int.Parse(teradpsData.partyDps) < 2000000)
+            if(int.Parse(teradpsData.partyDps) < 2000000 && areaId != 468)
             {
                 return;
             }
